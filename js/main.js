@@ -8,7 +8,14 @@ searchBar.addEventListener('keyup', function(event) {
         $('.thumbnail').removeClass('hidden');
         return;
     }
-    const imgs = $('.thumbnail a[data-title*="' + searchTerm.toLowerCase() + '"]');
-    $('.thumbnail').addClass('hidden');
-    imgs.parent().removeClass('hidden');
+    $('.thumbnail a').filter(function () {
+        if ($(this).attr('data-title').toLowerCase().includes(searchTerm)) {
+            $(this).parent().removeClass('hidden');
+        } else {
+            $(this).parent().addClass('hidden');
+        }
+    });
+    // const imgs = $('.thumbnail a[data-title*="' + searchTerm.toLowerCase() + '"]');
+    // $('.thumbnail').addClass('hidden');
+    // imgs.parent().removeClass('hidden');
 });
