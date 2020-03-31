@@ -52,6 +52,9 @@ input:focus {
     background-color: rgb(222, 222, 222);
 }
 
+.hidden {
+    display: none;
+}
 
 /* LIGHTBOX STYLES */
 
@@ -97,3 +100,4 @@ input:focus {
         padding: 50px 200px;
     }
 }
+
