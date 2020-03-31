@@ -15,7 +15,4 @@ searchBar.addEventListener('keyup', function(event) {
             $(this).parent().addClass('hidden');
         }
     });
-    // const imgs = $('.thumbnail a[data-title*="' + searchTerm.toLowerCase() + '"]');
-    // $('.thumbnail').addClass('hidden');
-    // imgs.parent().removeClass('hidden');
 });
