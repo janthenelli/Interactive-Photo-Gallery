@@ -8,7 +8,7 @@ searchBar.addEventListener('keyup', function(event) {
         $('.thumbnail').removeClass('hidden');
         return;
     }
-    const imgs = $('.thumbnail a[data-title*="' + searchTerm + '"]');
+    const imgs = $('.thumbnail a[data-title*="' + searchTerm.toLowerCase() + '"]');
     $('.thumbnail').addClass('hidden');
     imgs.parent().removeClass('hidden');
 });
